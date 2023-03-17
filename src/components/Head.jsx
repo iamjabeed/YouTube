@@ -11,7 +11,7 @@ import VoiceSearchIcon from "../assets/voice-search-icon.svg";
 
 const Head = () => {
   return (
-    <div className="flex justify-between z-50 static items-center px-4 py-2 shadow-md">
+    <div className="flex justify-between items-center px-4 py-2 shadow-md">
       <div className="flex justify-between items-center cursor-pointer">
         <img
           src={humbergerMenu}
