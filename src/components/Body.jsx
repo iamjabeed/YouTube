@@ -1,12 +1,12 @@
 import React from "react";
+import MainContainer from "./MainContainer";
 import SideBar from "./SideBar";
-import VideoContainer from "./VideoContainer";
 
 const Body = () => {
   return (
     <div className="flex">
       <SideBar />
-      <VideoContainer />
+      <MainContainer />
     </div>
   );
 };

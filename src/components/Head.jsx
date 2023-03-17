@@ -8,15 +8,23 @@ import myChannel from "../assets/my-channel.jpg";
 import humbergerMenu from "../assets/hamburger-menu.svg";
 import searchIcon from "../assets/search-icon.svg";
 import VoiceSearchIcon from "../assets/voice-search-icon.svg";
+import { useDispatch } from "react-redux";
+import { togglesMenu } from "../utils/appSlice";
 
 const Head = () => {
+
+const dispatch= useDispatch()
+  const toggleMenuHandler=()=>{
+    dispatch(togglesMenu())
+  }
   return (
     <div className="flex justify-between items-center px-4 shadow-md h-[14vh]">
       <div className="flex justify-between items-center cursor-pointer">
         <img
           src={humbergerMenu}
           alt="humbergerMenu"
-          className="h-4 sm:h-6 lg:h-10"
+          className="h-4 sm:h-6 xl:h-8"
+          onClick={()=>toggleMenuHandler()}
         />
         <img src={ytLogo} alt="logo" className="ml-4 h-8 sm:h-12 xl:h-16" />
       </div>
