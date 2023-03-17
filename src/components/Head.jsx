@@ -11,19 +11,19 @@ import VoiceSearchIcon from "../assets/voice-search-icon.svg";
 
 const Head = () => {
   return (
-    <div className="flex justify-between items-center px-4 py-2 shadow-md">
+    <div className="flex justify-between items-center px-4 shadow-md h-[14vh]">
       <div className="flex justify-between items-center cursor-pointer">
         <img
           src={humbergerMenu}
           alt="humbergerMenu"
-          className="h-8 sm:h-10 lg:h-14"
+          className="h-4 sm:h-6 lg:h-10"
         />
         <img src={ytLogo} alt="logo" className="ml-4 h-8 sm:h-12 xl:h-16" />
       </div>
-      <div className="flex justify-between items-center sm:grow  cursor-pointer align-middle mx-0 sm:mx-4 md:mx-8">
+      <div className="flex justify-between items-center sm:grow  max-w-2xl cursor-pointer align-middle mx-0 sm:mx-4 md:mx-8">
         <input
           type="text"
-          className="flex border border-gray-500 ml-4 w-40 sm:w-full py-2 rounded-l-full"
+          className="flex border border-gray-500 ml-4 w-40 sm:w-full py-2 rounded-l-full outline-1 outline-[#1a73e8]"
         />
         <button className="bg-gray-200 rounded-r-full py-[3px] px-2">
           <img src={searchIcon} alt="searchIcon" className="h-9" />
