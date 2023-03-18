@@ -10,13 +10,13 @@ import searchIcon from "../assets/search-icon.svg";
 import VoiceSearchIcon from "../assets/voice-search-icon.svg";
 import { useDispatch } from "react-redux";
 import { togglesMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
-
-const dispatch= useDispatch()
-  const toggleMenuHandler=()=>{
-    dispatch(togglesMenu())
-  }
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(togglesMenu());
+  };
   return (
     <div className="flex justify-between items-center px-4 shadow-md h-[14vh]">
       <div className="flex justify-between items-center cursor-pointer">
@@ -24,9 +24,11 @@ const dispatch= useDispatch()
           src={humbergerMenu}
           alt="humbergerMenu"
           className="h-4 sm:h-6 xl:h-8"
-          onClick={()=>toggleMenuHandler()}
+          onClick={() => toggleMenuHandler()}
         />
-        <img src={ytLogo} alt="logo" className="ml-4 h-8 sm:h-12 xl:h-16" />
+        <a href="/">
+          <img src={ytLogo} alt="logo" className="ml-4 h-8 sm:h-12 xl:h-16" />
+        </a>
       </div>
       <div className="flex justify-between items-center sm:grow  max-w-2xl cursor-pointer align-middle mx-0 sm:mx-4 md:mx-8">
         <input
