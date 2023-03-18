@@ -7,20 +7,22 @@ import youtubeMusic from "../assets/sidebar-images/youtube-music-side.svg";
 import library from "../assets/sidebar-images/library-side.svg";
 import { useSelector } from "react-redux";
 import MobileSideBar from "./MobileSideBar";
+import { Link } from "react-router-dom";
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
-  // if (!isMenuOpen) return null;
-  return isMenuOpen ? (
-    <MobileSideBar />
-  ) : (
+  if (!isMenuOpen) return null;
+  return (
     <div className="w-[5rem] lg:w-40">
       <div className="px-0 align-middle ">
         <div className="flex items-center flex-col xl:flex-row my-1 py-1 hover:bg-[#E0DDDD] cursor-pointer transition xl:mx-4">
-          <img src={home} alt="home" className="h-4 sm:h-6 lg:h-8" />
-          <span className="font-medium text-sm xl:text-base  xl:ml-4">
-            Home
-          </span>
+          <Link to={"/"}>
+            <img src={home} alt="home" className="h-4 sm:h-6 lg:h-8" />
+
+            <span className="font-medium text-sm xl:text-base  xl:ml-4">
+              Home
+            </span>
+          </Link>
         </div>
         <div className="flex items-center flex-col xl:flex-row my-1 py-1 hover:bg-[#E0DDDD] cursor-pointer transition xl:mx-4">
           <img

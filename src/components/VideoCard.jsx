@@ -1,15 +1,15 @@
 import React from "react";
 
 const VideoCard = ({ info }) => {
-  console.log(info);
-  console.log(info);
+  // console.log(info);
+  // console.log(info);
   // const { snippet, statistics } = info;
   // const { channelTitle, title, thumbnails } = snippet;
   // console.log(snippet);
   // console.log(statistics);
   return (
-    <div className="bg-white mx-2">
-      <div className=" h-60 sm:h-64 shadow-lg rounded hover:shadow-gray-500 hover:scale-105 transition-all duration-500 ">
+    <div className="bg-white mx-2 item-center">
+      <div className="w-60 md:w-full h-60 sm:h-64 shadow-lg rounded hover:shadow-gray-500 hover:scale-105 transition-all duration-500 ">
         <img
           src={info?.snippet?.thumbnails?.medium?.url}
           className="w-72 rounded-md"
