@@ -9,10 +9,10 @@ const VideoCard = ({ info }) => {
   // console.log(statistics);
   return (
     <div className="bg-white mx-2 item-center">
-      <div className="w-60 md:w-full h-60 sm:h-64 shadow-lg rounded hover:shadow-gray-500 hover:scale-105 transition-all duration-500 ">
+      <div className="w-60 md:w-[100%] h-60 sm:h-64 xl:h-full  shadow-lg rounded hover:shadow-gray-300 hover:scale-[1.04] delay-1000 transition-all duration-500 ">
         <img
           src={info?.snippet?.thumbnails?.medium?.url}
-          className="w-72 rounded-md"
+          className="w-72 md:w-full rounded-md"
           alt="thumbnail"
         />
         <h1 className="py-2 text-[10px] sm:text-[12px] font-bold overflow-hidden px-2">
