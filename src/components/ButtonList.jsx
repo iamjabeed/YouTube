@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-const buttonList = () => {
+const ButtonList = () => {
   const buttonsCategory = [
     "All",
     "Latest",
@@ -12,12 +12,12 @@ const buttonList = () => {
     "Football",
   ];
   return (
-    <div className="flex">
+    <div className="hidden md:flex">
       {buttonsCategory.map((button, index) => {
-        return <Button name={button} />;
+        return <Button key={index} name={button} />;
       })}
     </div>
   );
 };
 
-export default buttonList;
+export default ButtonList;
