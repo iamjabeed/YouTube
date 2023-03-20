@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 
 const Body = () => {
   return (
-    <div className="flex ">
+    <div className="flex pt-[13vh]">
       <SideBar />
       <Outlet />
     </div>

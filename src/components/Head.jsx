@@ -37,8 +37,8 @@ const Head = () => {
     dispatch(togglesMenu());
   };
   return (
-    <div className="flex justify-between items-center px-4 shadow-md ">
-      <div className="flex justify-between items-center cursor-pointer">
+    <div className="flex bg-white justify-between items-center px-4 shadow-md sticky top-0 z-[100]">
+      <div className="flex justify-between items-center cursor-pointer z-50">
         <img
           src={humbergerMenu}
           alt="humbergerMenu"
@@ -49,7 +49,7 @@ const Head = () => {
           <img src={ytLogo} alt="logo" className="ml-4 h-8 sm:h-12 xl:h-16" />
         </a>
       </div>
-      <div className="flex justify-between items-center sm:grow  max-w-2xl cursor-pointer align-middle mx-0 sm:mx-4 md:mx-8">
+      <div className="flex justify-between items-center sm:grow  max-w-2xl cursor-pointer align-middle mx-0 sm:mx-4 md:mx-8 z-50">
         <input
           type="text"
           className="flex border border-gray-500 ml-4 w-40 sm:w-full py-1 px-5 rounded-l-full outline-1 outline-[#1a73e8]"
@@ -89,7 +89,7 @@ const Head = () => {
         )}
       </div>
 
-      <div className="hidden sm:flex justify-between items-center gap-2 cursor-pointer">
+      <div className="hidden sm:flex justify-between items-center gap-2 cursor-pointer z-50">
         <img src={upLoad} alt="upload" className="sm:h-6 md:h-8 xl:h-14" />
         <img
           src={notification}

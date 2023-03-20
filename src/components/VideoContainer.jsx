@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { YOUTUBE_VIDEOS_API } from "../utils/constants";
+import Shimmer from "./Shimmer";
 import VideoCard from "./VideoCard";
 
 const VideoContainer = () => {
@@ -14,12 +15,14 @@ const VideoContainer = () => {
     // console.log(json.items);
     setVideos(json?.items);
   }
-  return (
-    <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-3.5 gap-y-4 pt-4 pl-4 ">
+  return videos.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <div className="grid grid-cols-1 mx-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-3.5 gap-y-4 pt-4 pl-4 ">
       {videos.map((video) => {
         return (
           <Link key={video.id} to={"/watch?v=" + video.id}>
-            <VideoCard  info={video} />
+            <VideoCard info={video} />
           </Link>
         );
       })}

@@ -13,13 +13,13 @@ const SideBar = () => {
 
   if (!isMenuOpen) return null;
   return (
-    <div className="w-[5rem] pt-4 lg:w-40 xl:w-48">
-      <div className="px-0 align-middle ">
+    <div className="w-[6rem] pt-4 lg:w-40 xl:w-48">
+      <div className="px-0 align-middle fixed top-[15vh] ">
         <div className="flex items-center flex-col xl:flex-row my-1 py-1 hover:bg-[#E0DDDD] cursor-pointer transition xl:mx-4">
           {/* <Link to={"/"}> */}
             <img src={home} alt="home" className="h-4 sm:h-6 lg:h-8" />
 
-            <span className="font-medium text-sm xl:text-base  xl:ml-4">
+            <span className="font-medium text-sm xl:text-base xl:ml-4">
               Home
             </span>
           {/* </Link> */}
