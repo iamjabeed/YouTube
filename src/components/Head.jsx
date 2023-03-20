@@ -37,7 +37,7 @@ const Head = () => {
     dispatch(togglesMenu());
   };
   return (
-    <div className="flex bg-white justify-between items-center px-4 shadow-md sticky top-0 z-[100]">
+    <div className="flex bg-[#ffffff] justify-between items-center px-4 shadow-md sticky top-0 z-[100]">
       <div className="flex justify-between items-center cursor-pointer z-50">
         <img
           src={humbergerMenu}
